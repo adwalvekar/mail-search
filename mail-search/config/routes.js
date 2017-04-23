@@ -33,7 +33,21 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
+    controller:'DefaultController',
+    action: 'verify'
+  },
+
+  '/auth':{
+    controller:'OAuthController',
+    action:'handleAuth'
+  },
+ '/token':{
+    controller:'OAuthController',
+    action:'handletoken'
+  },
+  '/home':{
+    controller:'DefaultController',
+    action:'home'
   }
 
   /***************************************************************************
